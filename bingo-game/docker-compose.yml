@@ -1,0 +1,32 @@
+
+services:
+  app:
+    build:
+      context: .
+    command: bash start.sh
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    environment:
+      GRADLE_USER_HOME: /box
+    volumes:
+      - .:/bingo-game
+      - box:/box
+    depends_on:
+      - db
+  db:
+    container_name: mongodb
+    image: mongo:5.0.9
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: bingo-game
+      MONGO_INITDB_ROOT_PASSWORD: bingo-game
+      MONGO_INITDB_DATABASE: bingo-game
+    ports:
+      - "27017:27017"
+  box:
+    image: busybox
+    volumes:
+      - /box
+volumes:
+  db:
+  box:

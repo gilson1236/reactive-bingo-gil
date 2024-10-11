@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: bingo-game
+  webflux:
+    base-path: /bingo-game
+  data:
+    mongodb:
+      uri: mongodb://bingo-game:bingo-game@db:27017/bingo-game?authSource=admin
