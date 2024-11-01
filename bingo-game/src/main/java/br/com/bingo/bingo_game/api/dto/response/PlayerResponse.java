@@ -1,4 +1,4 @@
-package br.com.bingo.bingo_game.api.controller.response;
+package br.com.bingo.bingo_game.api.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

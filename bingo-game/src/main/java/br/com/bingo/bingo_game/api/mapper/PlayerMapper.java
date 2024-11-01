@@ -1,7 +1,7 @@
 package br.com.bingo.bingo_game.api.mapper;
 
-import br.com.bingo.bingo_game.api.controller.request.PlayerRequest;
-import br.com.bingo.bingo_game.api.controller.response.PlayerResponse;
+import br.com.bingo.bingo_game.api.dto.request.PlayerRequest;
+import br.com.bingo.bingo_game.api.dto.response.PlayerResponse;
 import br.com.bingo.bingo_game.domain.document.Player;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
